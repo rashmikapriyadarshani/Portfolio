@@ -1,5 +1,6 @@
 
 
+
 *,
 *::before,
 *::after {
@@ -160,16 +161,91 @@ h1,h2,h3,h4,h5,h6,p{
 .ex-me{
   margin-top: 35px;
 }
+/* my skills */
+.skills-section {
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+}
 
+.skills-title {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
 
+.skills-title .highlight {
+    color: #1c5ce6;
+}
+
+/* Tabs */
+.skill-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.skill-tabs .tab {
+    padding: 12px 30px;
+    background: #ffffff;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #1c5ce6;
+    border: 2px solid #1c5ce6;
+    transition: 0.3s;
+}
+
+.skill-tabs .tab:hover {
+    background: #1c5ce6;
+    color: rgb(255, 255, 255);
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-card {
+    width: 220px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 20px;
+    display: none; /* hidden by default */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 20px;
+    box-shadow: 0 0 12px rgba(36, 118, 226, 0.2);
+    border: 1px solid #1c5ce6;
+    transition: 0.3s ease;
+}
+
+.skill-card .icon {
+    font-size: 28px;
+    color: #3693ca;
+    margin-bottom: 10px;
+}
+
+/* Hover effect to show skills */
+.skill-tabs .tab[data-category="uiux"]:hover ~ .skills-grid .skill-card[data-category="uiux"],
+.skill-tabs .tab[data-category="frontend"]:hover ~ .skills-grid .skill-card[data-category="frontend"],
+.skill-tabs .tab[data-category="tools"]:hover ~ .skills-grid .skill-card[data-category="tools"] {
+    display: flex;
+}
+
+  
 
 /* =================== Portfolio section ==================*/
 
 
 .portfolio-item .portfolio-btn {
   position: absolute;
-  width: 0;
-  height: 0;
+  width: 20px;
+  height: 30px;
   top: 50%;
   left: 50%;
   border-radius: 4px;
@@ -185,6 +261,75 @@ h1,h2,h3,h4,h5,h6,p{
   left: 30px;
 }
 
+/* Section Title */
+.section-title {
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+/* Grid */
+.portfolio-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+/* Card */
+.portfolio-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 255);
+    transition: 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 40px rgba(38, 36, 36, 0.7);
+}
+
+/* Image */
+.portfolio-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Content */
+.portfolio-content {
+    padding: 20px;
+}
+
+.portfolio-content h3 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.portfolio-content p {
+    color: #ccc;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Icons */
+.portfolio-icons {
+    margin-top: 15px;
+}
+
+.portfolio-icons i {
+    font-size: 22px;
+    color: #90c5e4;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.portfolio-icons i:hover {
+    color: #fff;
+}
 
 
 
